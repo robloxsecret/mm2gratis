@@ -1,364 +1,95 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gratis Mm2 Godlys 🔪🔫</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
-    <meta property="og:title" content="GRATIS MM2 GOODLYS!!! 🔫🔪">
-    <meta property="og:description" content="Hol dir heute noch Harvester und Icepiercer gratis! 🤑">
-    <meta property="og:image" content="https://primary.jwwb.nl/public/r/q/d/temp-gzcegbeqgjsbnkqcjyhg/img_3443-high.jpg?enable-io=true&enable=upscale&crop=1918%2C878%2Cx0%2Cy0%2Csafe&width=1180&height=540">
-    <meta property="og:image:width" content="1180">
-    <meta property="og:image:height" content="540">
-    <meta property="og:url" content="https://robloxsecret.github.io/gratisrobux/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GRATIS MM2 GODLYS!!! 🔪🔫">
-    <meta name="twitter:description" content="Hol dir heute noch Harvester und Icepiercer gratis! 🤑">
-    <meta name="twitter:image" content="https://primary.jwwb.nl/public/r/q/d/temp-gzcegbeqgjsbnkqcjyhg/img_3439-high.jpg?enable-io=true&enable=upscale&crop=1920%2C1920%2Cx0%2Cy0%2Csafe&width=1180&height=1180">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body, input, button {
-            font-family: 'Kumbh Sans', sans-serif;
-            font-weight: bold;
-        }
-
-         .fade-in {
-
-    opacity: 0;
-
-    animation: fadeIn 2s ease-out forwards;
-
-}
-
-
-
-@keyframes fadeIn {
-
-    to {
-
-        opacity: 1;
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake ChatGPT Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #343541;
+      color: white;
+      margin: 0;
+      padding: 0;
     }
-
-}
-
-
-
-    </style>
-
+    .chat-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .message {
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+      white-space: pre-wrap;
+    }
+    .user {
+      background-color: #40414f;
+      align-self: flex-end;
+      text-align: right;
+    }
+    .bot {
+      background-color: #444654;
+      align-self: flex-start;
+    }
+    .input-area {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      gap: 10px;
+    }
+    input, textarea, button {
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+    }
+    button {
+      background-color: #10a37f;
+      color: white;
+      cursor: pointer;
+    }
+    .chat-log {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
 </head>
-
-<body class="bg-gray-100">
-
-
-
-    <!-- Navigation Bar -->
-
-<nav class="bg-white p-4 shadow-md flex justify-between items-center">
-
-    <img src="https://primary.jwwb.nl/public/r/q/d/temp-gzcegbeqgjsbnkqcjyhg/img_3452-high.png?enable-io=true&enable=upscale&crop=1920%2C954%2Cx0%2Cy0%2Csafe&width=1180&height=586" 
-
-         alt="Logo" 
-
-         class="h-8 w-16 object-contain">
-
-    <div class="flex space-x-5 text-gray-600 text-sm font-bold">
-
-        <a href="#">Entdecken</a>
-
-        <a href="#">Marktplatz</a>
-
-        <a href="#">Robox</a>
-
-        <a href="#">Impressum</a>
-
+<body>
+  <div class="chat-container">
+    <h2>Fake ChatGPT Chat</h2>
+    <div class="chat-log" id="chatLog"></div>
+    <div class="input-area">
+      <input type="text" id="userInput" placeholder="Was soll der Nutzer sagen?">
+      <textarea id="botReply" rows="4" placeholder="Was soll ChatGPT antworten?"></textarea>
+      <button onclick="addFakeMessage()">Senden & anzeigen</button>
     </div>
-
-</nav>
-
-
-
-    <!-- Banner Section -->
-
-    <div class="relative mt-6 mx-2 rounded-lg overflow-hidden shadow-md">
-
-        <img src="https://primary.jwwb.nl/public/r/q/d/temp-gzcegbeqgjsbnkqcjyhg/img_3447-high.png?enable-io=true&enable=upscale&crop=1284%2C407%2Cx0%2Cy0%2Csafe&width=1180&height=374" 
-
-             alt="Banner" 
-
-             class="w-full h-auto object-contain">
-
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center fade-in">
-
-
-
-            <h1 class="font-bold" style="font-size: calc(60% * 2.2); line-height: 1.2;">Gratis Mm2 Godlys!</h1>
-
-            <p class="mt-2" style="font-size: calc(60% * 1.5); line-height: 1.2;">Mm2 Godlys erlauben es dir deinen Mm2 Waffen einen neuen Look zu verschaffen.</p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- Main Section -->
-
-<div class="px-4">
-
-    <div id="main-container" class="w-full max-w-xl mx-auto mt-6 p-6 bg-white shadow-md rounded-lg transition-all duration-300">
-
-
-
-        <p id="label" class="mb-4 text-gray-700">Roblox Benutzer:</p>
-
-        <input id="username-input" type="text" class="w-full p-2 mb-4 border rounded-md" placeholder="Benutzernamen eingeben...">
-
-        <button id="start-button" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 active:bg-blue-700 transition duration-150">Weiter</button>
-
-
-
-        <!-- Hinweistext -->
-
-
-
-    </div>
-
-</div>
-
-    <div class="flex justify-center mt-4">
-
-    <p class="text-center text-[10px] text-gray-400 max-w-lg">
-
-        Hinweis: „Robox“ ist die virtuelle In-Game-Währung unseres Roblox-Spiels „99% Fail Obby“. Diese Währung wird von der Community unseres Spiels so genannt und steht in keinem Zusammenhang mit Roblox Inc. oder der offiziellen Währung Robux. Im Spiel wirst du dazu aufgefordert, den Obby bis zum Ende durchzuspielen, um kostenlose Robox zu erhalten. Wichtig: Robox können nicht in Robux umgewandelt oder außerhalb unseres Spiels verwendet werden.
-
-    </p>
-
-</div>
-
-
-
-<script>
-
-    document.getElementById("start-button").addEventListener("click", function (event) {
-
-        const usernameInput = document.getElementById('username-input');
-
-        const username = usernameInput.value.trim();
-
-        const mainContainer = document.getElementById('main-container');
-
-
-
-        if (!username) {
-
-            alert("Bitte gebe deinen Roblox Benutzernamen ein.");
-
-            return;
-
-        }
-
-
-
-        // Elemente ausblenden
-
-        document.getElementById('label').style.display = 'none';
-
-        usernameInput.style.display = 'none';
-
-        event.target.style.display = 'none';
-
-        mainContainer.classList.add("h-96");
-
-
-
-        const tableData = [
-
-            { left: "0.00€", button: "800", info: "1 Aufgabe", tasks: 1 },
-
-            { left: "0.00€", button: "1700", info: "2 Aufgaben", tasks: 2 },
-
-            { left: "0.00€", button: "3600", info: "3 Aufgaben", tasks: 3 },
-
-            { left: "0.00€", button: "6400", info: "4 Aufgaben", tasks: 4 }
-
-        ];
-
-
-
-        // Funktion zum Anzeigen des Ladebildschirms
-
-        window.showLoadingScreen = function(infoText, taskCount) {
-
-            mainContainer.innerHTML = `
-
-                <div class="flex flex-col items-center justify-center h-full text-center">
-
-                    <p class="text-lg font-bold mb-4 w-full break-words">
-
-                        Deine erste Aufgabe wird ausgelost...
-
-                    </p>
-
-                    <video 
-
-                        width="320" 
-
-                        height="240" 
-
-                        autoplay 
-
-                        loop 
-
-                        muted 
-
-                        playsinline 
-
-                        disablePictureInPicture
-
-                        class="w-32 h-32 object-contain">
-
-                        <source src="./IMG_3457.mp4" type="video/mp4">
-
-                        Dein Browser unterstützt das Video-Format nicht.
-
-                    </video>
-
-                </div>
-
-            `;
-
-
-
-            // Nach 3 Sekunden zur neuen Ansicht wechseln
-
-            setTimeout(() => {
-    // Ladebildschirm leeren und Container größer machen
-    mainContainer.innerHTML = `
-        <div class="text-center" style="height: 500px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <h2 class="text-2xl font-bold mb-4">Deine erste Aufgabe:</h2>
-            <p class="mb-4 text-gray-600">
-                Schaffe diesen Parkour auf Roblox. Am Ende musst du folgenden Code eingeben, dann musst du zu dieser Website zurückkehren: ZG61MTA27
-            </p>
-            <img src="https://primary.jwwb.nl/public/r/q/d/temp-gzcegbeqgjsbnkqcjyhg/download_5-standard.png" alt="Aufgabenbild" class="mb-4 rounded-md shadow-md w-full object-cover">
-            <button onclick="window.open('https://www.roblox.com/games/114486146279078/99-fail-obby', '_blank')" 
-                class="bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition duration-200 ease-in-out transform hover:scale-105 active:scale-95">
-                Zur Aufgabe
-            </button>
-        </div>
-    `;
-
-    // Dynamische Größenanpassung des Containers
-    mainContainer.style.height = 'auto';  // Höhe des Containers automatisch anpassen
-    mainContainer.style.minHeight = '500px';  // Optional: Stelle sicher, dass der Container mindestens 500px hoch ist (damit es nicht zu klein aussieht)
-}, 3000);
-
-
-
-
-        };
-
-
-
-        // Ladeanimation anzeigen
-
-        mainContainer.insertAdjacentHTML("beforeend", `
-
-            <div id="loading-container" class="flex flex-col items-center justify-center h-full text-center">
-
-                <p class="text-lg font-bold mb-4 w-full break-words">
-
-                    Suche nach Benutzer ${username}...
-
-                </p>
-
-                <video 
-
-                    width="320" 
-
-                    height="240" 
-
-                    autoplay 
-
-                    loop 
-
-                    muted 
-
-                    playsinline 
-
-                    disablePictureInPicture
-
-                    class="w-32 h-32 object-contain">
-
-                    <source src="./IMG_3457.mp4" type="video/mp4">
-
-                    Dein Browser unterstützt das Video-Format nicht.
-
-                </video>
-
-            </div>
-
-        `);
-
-
-
-        // Nach 5 Sekunden Animation entfernen und Tabelle anzeigen
-
-        setTimeout(() => {
-
-            document.getElementById("loading-container").remove();
-
-
-
-            mainContainer.insertAdjacentHTML("beforeend", `
-
-
-                <h2 class="text-lg font-semibold mb-2 text-center text-gray-500">Erfülle Aufgaben, um an gratis Robox zu gelangen! 🤑</h2>
-
-                <div class="w-full">
-
-                    <div class="grid grid-cols-3 text-left">
-
-                        ${tableData.map((row, index) => `
-
-                            <div class="flex items-center justify-center p-4 font-bold text-black ${index < tableData.length - 1 ? 'border-b border-gray-300' : ''}">
-
-                                ${row.left}
-
-                            </div>
-
-                            <div class="flex items-center justify-center p-4 ${index < tableData.length - 1 ? 'border-b border-gray-300' : ''}">
-
-                                <button 
-
-                                    class="flex items-center border border-gray-400 px-5 py-2 rounded-md text-lg transition transform hover:scale-105 active:scale-95 -ml-3"
-
-                                    onclick="showLoadingScreen('${row.info}', ${row.tasks})"
-
-                                >
-
-                                    <img src="./IMG_3460.png" alt="Icon" class="h-6 w-6 mr-2 -ml-1">
-
-                                    <span>${row.button}</span>
-
-                                </button>
-
-                            </div>
-
-                            <div class="flex items-center justify-center p-4 text-gray-500 text-sm ${index < tableData.length - 1 ? 'border-b border-gray-300' : ''}">
-                                ${row.info}
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            `);
-        }, 5000);
-    });
-</script>
+  </div>
+
+  <script>
+    function addFakeMessage() {
+      const userInput = document.getElementById("userInput").value.trim();
+      const botReply = document.getElementById("botReply").value.trim();
+      const chatLog = document.getElementById("chatLog");
+
+      if (userInput && botReply) {
+        const userMessage = document.createElement("div");
+        userMessage.className = "message user";
+        userMessage.textContent = userInput;
+
+        const botMessage = document.createElement("div");
+        botMessage.className = "message bot";
+        botMessage.textContent = botReply;
+
+        chatLog.appendChild(userMessage);
+        chatLog.appendChild(botMessage);
+
+        // Eingabefelder leeren
+        document.getElementById("userInput").value = "";
+        document.getElementById("botReply").value = "";
+      }
+    }
+  </script>
 </body>
 </html>
