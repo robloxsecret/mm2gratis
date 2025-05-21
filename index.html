@@ -5,90 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fake ChatGPT Chat</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background-color: #343541;
-      color: white;
       margin: 0;
-      padding: 0;
-    }
-    .chat-container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .message {
-      padding: 10px 15px;
-      border-radius: 10px;
-      margin: 10px 0;
-      white-space: pre-wrap;
-    }
-    .user {
-      background-color: #40414f;
-      align-self: flex-end;
-      text-align: right;
-    }
-    .bot {
-      background-color: #444654;
-      align-self: flex-start;
-    }
-    .input-area {
+      font-family: 'Inter', sans-serif;
+      background-color: #343541;
+      color: #d1d5db;
       display: flex;
       flex-direction: column;
-      margin-top: 20px;
+      height: 100vh;
+    }
+
+    .chat-log {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .message {
+      padding: 16px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      max-width: 100%;
+    }
+
+    .user {
+      background-color: #444654;
+    }
+
+    .bot {
+      background-color: #3e3f4b;
+    }
+
+    .chat-entry {
+      margin-bottom: 8px;
+      border-bottom: 1px solid #2f3037;
+    }
+
+    .input-area {
+      padding: 12px 20px;
+      border-top: 1px solid #2f3037;
+      background-color: #343541;
+      display: flex;
+      flex-direction: column;
       gap: 10px;
     }
-    input, textarea, button {
-      padding: 10px;
-      font-size: 16px;
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      background-color: #40414f;
+      color: white;
       border: none;
       border-radius: 5px;
-      width: 100%;
+      resize: none;
     }
+
     button {
       background-color: #10a37f;
       color: white;
+      border: none;
+      padding: 12px;
+      font-size: 15px;
+      border-radius: 5px;
       cursor: pointer;
     }
-    .chat-log {
-      display: flex;
-      flex-direction: column;
+
+    h2 {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <div class="chat-container">
-    <h2>Fake ChatGPT Chat</h2>
-    <div class="chat-log" id="chatLog"></div>
-    <div class="input-area">
-      <input type="text" id="userInput" placeholder="Was soll der Nutzer sagen?">
-      <textarea id="botReply" rows="4" placeholder="Was soll ChatGPT antworten?"></textarea>
-      <button onclick="addFakeMessage()">Senden & anzeigen</button>
-    </div>
+  <div class="chat-log" id="chatLog"></div>
+
+  <div class="input-area">
+    <input type="text" id="userInput" placeholder="Was soll der Nutzer sagen?">
+    <textarea id="botReply" rows="3" placeholder="Was soll ChatGPT antworten?"></textarea>
+    <button onclick="addFakeMessage()">Senden & anzeigen</button>
   </div>
 
   <script>
+    const chatLog = document.getElementById("chatLog");
+
     function addFakeMessage() {
       const userInput = document.getElementById("userInput").value.trim();
       const botReply = document.getElementById("botReply").value.trim();
-      const chatLog = document.getElementById("chatLog");
 
       if (userInput && botReply) {
-        const userMessage = document.createElement("div");
-        userMessage.className = "message user";
-        userMessage.textContent = userInput;
+        const userEntry = createMessage(userInput, "user");
+        const botEntry = createMessage(botReply, "bot");
 
-        const botMessage = document.createElement("div");
-        botMessage.className = "message bot";
-        botMessage.textContent = botReply;
+        chatLog.appendChild(userEntry);
+        chatLog.appendChild(botEntry);
 
-        chatLog.appendChild(userMessage);
-        chatLog.appendChild(botMessage);
-
-        // Eingabefelder leeren
         document.getElementById("userInput").value = "";
         document.getElementById("botReply").value = "";
+
+        chatLog.scrollTop = chatLog.scrollHeight;
       }
+    }
+
+    function createMessage(text, type) {
+      const wrapper = document.createElement("div");
+      wrapper.className = "chat-entry";
+
+      const message = document.createElement("div");
+      message.className = "message " + type;
+      message.textContent = text;
+
+      wrapper.appendChild(message);
+      return wrapper;
     }
   </script>
 </body>
